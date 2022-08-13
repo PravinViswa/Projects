@@ -1,5 +1,5 @@
-# FitnesssMonitor
-Fitness Monitor is an Android application that users can use to track their daily activities like walking, jogging, sitting, standing, walking upstairs and walking downstairs. The application uses a Convolutional Neural Network (CNN) to predict user activity automatically and stores the information in a database stored on the phone. The users can then choose to visualize the statistics.
+# SKCT Fitness App
+SKCT Fitness is an Android application that users can use to track their daily activities like walking, jogging, sitting, standing, walking upstairs and walking downstairs. The application uses a Convolutional Neural Network (CNN) to predict user activity automatically and stores the information in a database stored on the phone. The users can then choose to visualize the statistics.
 
 # Java File Structure
 1. MainActivity
@@ -26,11 +26,3 @@ Fitness Monitor is an Android application that users can use to track their dail
     
 7. Constants
     - Holds constant values used in all class files
-    
-# Screenshots
-<p float="left">
-  <img src="Screens/Welcome.jpg" width="30%" />
-  <img src="Screens/Confidence.jpg" width="30%" /> 
-  <img src="Screens/Stats.jpg" width="30%" />
-</p>
-
