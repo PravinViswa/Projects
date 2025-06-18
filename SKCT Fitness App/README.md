@@ -1,6 +1,30 @@
 # SKCT Fitness App
 SKCT Fitness is an Android application that users can use to track their daily activities like walking, jogging, sitting, standing, walking upstairs and walking downstairs. The application uses a Convolutional Neural Network (CNN) to predict user activity automatically and stores the information in a database stored on the phone. The users can then choose to visualize the statistics.
 
+## 🔧 Tech Stack
+
+- Java + XML (Android App)
+- Firebase (for login + storage)
+- Render (optional backend)
+
+## 📦 Features
+
+- Track daily workout
+- BMI & step counter
+- Login & register
+- Light/dark mode
+
+## 📲 Run on Android
+
+- Import project in Android Studio
+- Build and run on emulator/device
+
+## 🧪 Demo
+
+[Go 🚀](https://skctfitnessapp.onrender.com)
+
+## 📚 Structure
+
 # Java File Structure
 1. MainActivity
     - Registers/unregisters event listener
@@ -26,3 +50,6 @@ SKCT Fitness is an Android application that users can use to track their daily a
     
 7. Constants
     - Holds constant values used in all class files
+
+
+
