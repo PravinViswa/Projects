@@ -2,294 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Age Calculator</title>
-  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pravin's Projects</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #f0f8ff;
-      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
     }
     h1 {
-      font-size: 2em;
+      text-align: center;
+      margin: 30px 0;
+    }
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+    .project-card h2 {
+      font-size: 20px;
       margin-bottom: 10px;
     }
-    input[type="datetime-local"] {
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #aaa;
+    .buttons {
+      margin-top: 15px;
     }
-    select {
-      position: fixed;
-      bottom: 10px;
-      left: 15px;
-      padding: 5px;
-      font-size: 14px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
+    .btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
       border-radius: 6px;
-      margin-left: 10px;
-      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background-color: #28a745;
+      transition: background-color 0.3s;
     }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #result {
-      margin-top: 30px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .fun-line {
-      margin-top: 20px;
-      font-style: italic;
-      color: #888;
-    }
-    #loading {
-      margin-top: 20px;
-      font-size: 16px;
-      color: #555;
-    }
-    #sleep-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(240, 248, 255, 0.95);
-      backdrop-filter: blur(8px);
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-    #sleep-screen h2 {
-      font-size: 24px;
-      color: #444;
-    }
-    #sleep-screen span {
-      font-size: 48px;
-      margin-top: 10px;
-    }
-    canvas#confetti {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 1000;
-    }
-    #sleep-timer {
-      position: fixed;
-      bottom: 10px;
-      right: 15px;
-      font-size: 14px;
-      color: #aaa;
-      font-style: italic;
-      z-index: 1001;
+    .btn:hover {
+      background-color: #1f883d;
     }
   </style>
 </head>
 <body>
-  <h1>🧮 How Long Have You Been Rockin' Life?</h1>
-  <p>Pick your Date and Time of Birth 👇</p>
-  <input type="datetime-local" id="dob" />
-  <br><br>
-  <button onclick="calculateAge()">Calculate</button>
+  <h1>🛠️ My Projects</h1>
+  <div class="projects-container">
 
-  <div id="loading"></div>
-  <div id="result"></div>
-  <div class="fun-line" id="funnyLine"></div>
-
-  <div id="sleep-screen">
-    <h2>⏸️ The server has dozed off for now</h2>
-    <span>😴✨</span>
-    <p style="margin-top:10px;">Refresh the page to wake it up!</p>
+   <!-- Age Calculator -->
+<div class="project-card">
+  <h2>Age Calculator</h2>
+  <p>Java backend + UI to calculate age from DOB.</p>
+  <div class="buttons">
+    <a class="btn" <a class="btn" href="https://pravinviswa.github.io/Project-1/index.html" target="_blank">Go 🚀</a>
+    <a class="btn" href="https://github.com/PravinViswa/Project-1/tree/main" target="_blank">Source Code</a>
+    <a class="btn" href="https://github.com/PravinViswa/Project-1/blob/main/README.md" target="_blank">User Guide 📖</a>
   </div>
+</div>
 
-  <select id="timezoneSelect"></select>
-  <div id="sleep-timer">Sleep in: 600s</div>
-  <canvas id="confetti"></canvas>
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script>
-    const DateTime = luxon.DateTime;
-    let refreshIntervalId, sleepCountdownId;
-    let sleepTimeLeft = 600;
-    let lastDob = "", lastZone = "", currentSessionId = null;
+    <!-- Unit Converter -->
+    <div class="project-card">
+      <h2>Unit Converter</h2>
+      <p>Convert units like length, weight using JavaScript.</p>
+      <div class="buttons">
+        <a class="btn" href="https://pravinviswa.github.io/Projects/UnitConverter/" target="_blank">Go 🚀</a>
+        <a class="btn" href="https://github.com/pravinviswa/Projects/tree/main/UnitConverter" target="_blank">Source Code</a>
+        <a class="btn" href="https://github.com/pravinviswa/Projects/blob/main/UnitConverter/README.md" target="_blank">User Guide 📖</a>
+      </div>
+    </div>
 
-    const resultDiv = document.getElementById("result");
-    const funnyLine = document.getElementById("funnyLine");
-    const loading = document.getElementById("loading");
+    <!-- Hospital Management System -->
+    <div class="project-card">
+      <h2>Hospital Management</h2>
+      <p>Java-based system for hospital records and appointments.</p>
+      <div class="buttons">
+        <a class="btn" href="https://yourhospitalapp.onrender.com" target="_blank">Go 🚀</a>
+        <a class="btn" href="https://github.com/pravinviswa/Projects/tree/main/HospitalManagement" target="_blank">Source Code</a>
+        <a class="btn" href="https://github.com/pravinviswa/Projects/blob/main/HospitalManagement/README.md" target="_blank">User Guide 📖</a>
+      </div>
+    </div>
 
-    function populateTimezones() {
-      const select = document.getElementById("timezoneSelect");
-      const zones = Intl.supportedValuesOf('timeZone');
-      const currentZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    <!-- Medicine Reminder -->
+    <div class="project-card">
+      <h2>Medicine Reminder</h2>
+      <p>Reminder system for medicine intake with UI.</p>
+      <div class="buttons">
+        <a class="btn" href="https://yourmedapp.onrender.com" target="_blank">Go 🚀</a>
+        <a class="btn" href="https://github.com/pravinviswa/Projects/tree/main/MedicineReminder" target="_blank">Source Code</a>
+        <a class="btn" href="https://github.com/pravinviswa/Projects/blob/main/MedicineReminder/README.md" target="_blank">User Guide 📖</a>
+      </div>
+    </div>
 
-      zones.forEach(zone => {
-        const option = document.createElement("option");
-        option.value = zone;
-        option.textContent = zone;
-        if (zone === currentZone) option.selected = true;
-        select.appendChild(option);
-      });
+    <!-- SKCT Fitness App -->
+    <div class="project-card">
+      <h2>SKCT Fitness App</h2>
+      <p>Workout tracking and fitness built with Android Studio</p>
+      <div class="buttons">
+        <a class="btn" href="https://skctfitnessapp.onrender.com" target="_blank">Go 🚀</a>
+        <a class="btn" href="https://github.com/PravinViswa/Projects/blob/main/SKCT%20Fitness%20App" target="_blank">Source Code</a>
+        <a class="btn" href="https://github.com/PravinViswa/Projects/blob/main/SKCT%20Fitness%20App/README.md" target="_blank">User Guide 📖</a>
+      </div>
+    </div>
 
-      select.addEventListener("change", () => {
-        resultDiv.innerHTML = "";
-        funnyLine.innerHTML = "";
-        loading.innerText = "";
-        clearInterval(refreshIntervalId);
-      });
-    }
-
-    function startSleepCountdown() {
-      const sleepDisplay = document.getElementById("sleep-timer");
-      sleepTimeLeft = 600;
-      sleepDisplay.style.display = "block";
-      sleepDisplay.innerText = `Sleep in: ${sleepTimeLeft}s`;
-
-      sleepCountdownId = setInterval(() => {
-        sleepTimeLeft--;
-        if (sleepTimeLeft <= 0) {
-          clearInterval(sleepCountdownId);
-          sleepDisplay.style.display = "none";
-          putPageToSleep();
-        } else {
-          sleepDisplay.innerText = `Sleep in: ${sleepTimeLeft}s`;
-        }
-      }, 1000);
-    }
-
-    function putPageToSleep() {
-      document.getElementById("sleep-screen").style.display = "flex";
-      clearInterval(sleepCountdownId);
-      document.getElementById("sleep-timer").style.display = "none";
-    }
-
-    async function calculateAge() {
-      clearInterval(refreshIntervalId);
-      clearInterval(sleepCountdownId);
-
-      const dobInput = document.getElementById("dob").value;
-      const timezone = document.getElementById("timezoneSelect").value;
-
-      resultDiv.innerHTML = "";
-      funnyLine.innerText = "";
-
-      currentSessionId = Date.now();
-      const thisSession = currentSessionId;
-
-      const loadingMessages = [
-        "⏳ Hold up... Waking up the server from its nap... 💤",
-        "🔧 Spinning up some backend magic... give it a sec!",
-        "😴 The server's sipping coffee and getting ready...",
-        "🧙‍♂️ Waking up the backend wizard"
-      ];
-
-      const secondMessages = [
-        "💸 Not a paid server — so yeah, takes a few secs to warm up!",
-        "🚀 First request is slow because... free tier server struggles 😬",
-        "🧊 Cold start alert: Free tier server waking up like a Monday morning!",
-      ];
-
-      const msg1 = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
-      const msg2 = secondMessages[Math.floor(Math.random() * secondMessages.length)];
-
-      loading.innerText = msg1;
-      setTimeout(() => {
-        if (currentSessionId === thisSession) {
-          loading.innerText = msg2;
-        }
-      }, 2000);
-
-      if (!dobInput) {
-        alert("Pick your date and time of birth!");
-        loading.innerText = "";
-        return;
-      }
-
-      lastDob = dobInput;
-      lastZone = timezone;
-
-      try {
-        const res = await fetch(`https://project-1-ifvd.onrender.com/api/calculate-age?dob=${dobInput}&timezone=${timezone}`);
-        const data = await res.json();
-
-        if (thisSession !== currentSessionId) return; // skip if outdated session
-        loading.innerText = "";
-
-        if (data.error) {
-          resultDiv.innerHTML = `${data.error}`;
-          funnyLine.innerText = "Try entering a proper date 😅";
-          return;
-        }
-
-        const birth = DateTime.fromISO(dobInput, { zone: timezone });
-
-        function updateTimer() {
-          const now = DateTime.now().setZone(timezone);
-          const diff = now.diff(birth, ['years', 'months', 'days', 'hours', 'minutes', 'seconds']).toObject();
-
-          resultDiv.innerHTML = `
-            ⌛ You’ve survived:<br>
-            ${diff.years ? `<strong>${Math.floor(diff.years)}</strong> years, ` : ""}
-            ${diff.months ? `<strong>${Math.floor(diff.months)}</strong> months, ` : ""}
-            ${diff.days ? `<strong>${Math.floor(diff.days)}</strong> days, ` : ""}
-            ${diff.hours ? `<strong>${Math.floor(diff.hours)}</strong> hours, ` : ""}
-            ${diff.minutes ? `<strong>${Math.floor(diff.minutes)}</strong> minutes, ` : ""}
-            <strong>${Math.floor(diff.seconds)}</strong> seconds 🎉
-            <br><br>🕐 Timezone: <strong>${timezone}</strong>
-          `;
-        }
-
-        updateTimer();
-        refreshIntervalId = setInterval(updateTimer, 1000);
-
-        const birthDate = birth.toJSDate();
-        const nowDate = DateTime.now().setZone(timezone).toJSDate();
-        const isBirthday = birthDate.getDate() === nowDate.getDate() && birthDate.getMonth() === nowDate.getMonth();
-
-        if (isBirthday) {
-          funnyLine.innerHTML = "<strong>Happy Birthday!</strong>";
-          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-        } else {
-          const funLines = [
-            "You're older than your favorite 😂",
-            "That’s a lot of candles on your cake! 🎂",
-            "You're not old, just well-seasoned. 🌶️",
-            "You're aging like fine wine 🍷",
-            "Vibes, wisdom, and age — you're packin' it all! 💥",
-            "More years, more stories. Keep rockin'! 🧠✨",
-            "Still younger than the oldest meme 😎"
-          ];
-          funnyLine.innerText = funLines[Math.floor(Math.random() * funLines.length)];
-        }
-
-        startSleepCountdown();
-        setTimeout(putPageToSleep, 600000);
-
-      } catch (err) {
-        if (thisSession !== currentSessionId) return;
-        loading.innerText = "";
-        resultDiv.innerHTML = "😵 Oops! Something went wrong. Try again.";
-        funnyLine.innerText = "Looks like server is shy this time 😬";
-        console.error(err);
-      }
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-      fetch("https://project-1-ifvd.onrender.com/api/ping").catch(() => {});
-      populateTimezones();
-    });
-  </script>
+  </div>
 </body>
 </html>
